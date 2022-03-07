@@ -1,38 +1,152 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Zilla+Slab:wght@300;400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
+  transition: 0.5s;
+  background-color: white;
+  background: #c31432;  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #240b36, #c31432);  Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #240b36,#c31431, #240b36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ background-size: 400% 400%;
   text-align: center;
+  height: 100vh;
+  animation: gradient 15s ease-in-out infinite;
+}
+@keyframes gradient {
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.authorContainer{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  /* max-width: 15rem; */
+  height: 100vh;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; 
+  left: 0;
+  background-color: transparent; 
+  overflow-x: hidden; 
+  transition: 0.5s; 
+  justify-content: end;
+}
+.authorNavIn{
+  height: 95vh;
+  overflow-y: scroll;
+
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.authorElement{
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Zilla Slab', serif;
+  padding: 10px 0;
+  font-style: italic;
+  font-size: 1.05rem;
+  text-shadow: 4px 5px 4px gray;
+  box-shadow: inset 5px 5px 10px rgba(92, 92, 92, 0.849);
+}
+.authorElement:hover{
+  background-color: #aaaaaa;
+}
+
+#main{
+  transition: margin-left .5s;
+  padding: 40px 20px;
+  height: 100%;
   color: white;
+  overflow-x:hidden;
+  font-family: 'Zilla Slab', serif;
+  text-align: center;
+}
+.loader{
+  width: 4rem;
+  margin-top: 5rem;
+  /* position: absolute; */
+
 }
 
-.App-link {
-  color: #61dafb;
+
+
+/* NAV */
+.menuBar{
+  /* background-color: #111; */
+  margin:5px 0 10px 10px;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 20;
+  background-color: rgba(17, 17, 17, 0.316);
+}
+.menuBar #bar{
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 20px;
+  transition: .3s;
+  /* position: absolute; */
+}
+ .close span{
+   top:10px;
+   left: 0px;
+    position: absolute;
+    transition: .3s;
+ }
+ .close span:nth-child(1){
+   transform: rotate(45deg);
+ }
+ .close span:nth-child(2){
+  transform: rotate(-45deg);
+}
+.close span:nth-child(3){
+  transform: scale(0);
+}
+.slideNav{
+  width: 15rem;
+}
+.slideNav2{
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Poems */
+#header{
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+#header span{font-size: 5rem; }
+.heading{font-weight: bold; text-decoration: underline;}
+
+.footer{
+  font-family: 'Zilla Slab', serif;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
 }
