@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import $ from 'jquery';
 
 function Authors() {
   var a = 1;
@@ -33,8 +33,6 @@ function Authors() {
     nav.style.background="transparent"
 
     }
-
-
     if(main.style.marginLeft==="15rem"){
       main.style.marginLeft="0"
     }
@@ -42,7 +40,10 @@ function Authors() {
       main.style.marginLeft="15rem"
     }
 
-   }
+   }  
+   
+   
+   //  POEMS FETCH
    const [poems, setpoems] = useState([])
   //  setloadedPoem(false)
    const fetchPoems = async (e)=>{
@@ -68,7 +69,11 @@ function Authors() {
      setloadedPoem(true)
    }
 
-  //  POEMS FETCH
+
+   
+
+
+
 
    
 
@@ -92,7 +97,15 @@ function Authors() {
              {/* POEMS */}
               <div id='main' className='poemContainer'>
                 <h1 id='header'><span>P</span>oems</h1>
-                <p>{authorprop===""?"":"by "+authorprop}</p>
+                <div >{authorprop===""?<div className='subtitle'>
+                  <p>Welcome to Word Breeze</p>
+                 
+                  <div id='tip'> 
+                    <p>Tip: Select Your Favourite Author From That Top Button <img src="https://img.icons8.com/ios-glyphs/20/ffffff/menu--v2.png"/></p>
+                  </div>
+                  <span> Desinged & Developed by Sankalp Tripathi </span>
+                  </div>:"by "+authorprop}</div>
+
                   <div>
                     {!loadedPoem?<div><img className='loader' src='https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif' alt='loader'></img></div>:poems.map((element)=>{
                       return(
@@ -107,7 +120,6 @@ function Authors() {
                       )
                     })}
                   </div>
-
                 </div>
 
 
