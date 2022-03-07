@@ -78,7 +78,7 @@ function Authors() {
                   <div>
                     {!loadedAuthor?<div><img className='loader' src='https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif' alt='loader'></img></div>:poems.map((element)=>{
                       return(
-                        < div className='poem' key={element.lines[0]}>  
+                        < div className='poem' key={element.lines[0]+a}>  
                         <h4 className='mt-5 mb-3 heading'>{element.title}</h4>
                          { element.lines.map((item)=>{
                          return (<p className='lines' key={a++}>{item}</p>)

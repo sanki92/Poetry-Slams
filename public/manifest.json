@@ -1,11 +1,21 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Poem Website",
+  "name": "Website Full of Poems",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://img.icons8.com/color/48/000000/poem.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "https://img.icons8.com/external-icongeek26-flat-icongeek26/190/000000/external-poetry-peru-icongeek26-flat-icongeek26.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://img.icons8.com/external-icongeek26-flat-icongeek26/500/000000/external-poetry-peru-icongeek26-flat-icongeek26.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
