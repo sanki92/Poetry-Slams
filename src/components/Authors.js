@@ -98,12 +98,11 @@ function Authors() {
               <div id='main' className='poemContainer'>
                 <h1 id='header'><span>P</span>oems</h1>
                 <div >{authorprop===""?<div className='subtitle'>
-                  <p>Welcome to Word Breeze</p>
                  
                   <div id='tip'> 
                     <p>Tip: Select Your Favourite Author From That Top Button <img src="https://img.icons8.com/ios-glyphs/20/ffffff/menu--v2.png"/></p>
-                  </div>
                   <span> Desinged & Developed by Sankalp Tripathi </span>
+                  </div>
                   </div>:"by "+authorprop}</div>
 
                   <div>

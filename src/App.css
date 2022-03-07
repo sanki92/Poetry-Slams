@@ -57,7 +57,7 @@ body{
   display: none;
 }
 .authorElement{
-  background-color: #e0e0e0;
+  background-color: #b5b4b4ce;
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
@@ -145,24 +145,21 @@ body{
 .heading{font-weight: bold; text-decoration: underline;}
 
 .subtitle{
-  margin-top: 5rem;
   /* font-family: 'Great Vibes', cursive; */
   font-size: .9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .subtitle span{
   margin: 0;
 }
-.subtitle p:nth-child(1){
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.2rem;
-  margin-bottom: 4rem;
-}
+
 #tip{
   margin-top: .5rem;
   margin-bottom: 0;
-}
-#tip p{
-  font-family: 'Zilla Slab', serif;
-  font-size: .9rem;
-  margin-bottom: 0;
+  position: absolute;
+  top: 20rem;
+
 }
