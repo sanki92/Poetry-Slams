@@ -37,6 +37,7 @@ body{
   flex-direction: column;
   justify-content: space-between;
   /* max-width: 15rem; */
+  white-space:nowrap;
   height: 100vh;
   width: 0;
   position: fixed; /* Stay in place */
